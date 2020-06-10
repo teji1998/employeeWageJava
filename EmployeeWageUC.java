@@ -3,12 +3,17 @@ public class EmployeeWageUC{
 		int ratePerHour=20,empHour=0;
 		System.out.println("Welcome to Employee Wage Computation.");
 		int fulltime=1;
-		double empCheck=Math.floor(Math.random()*10)%2;
+		int parttime=2;
+		double empCheck=Math.floor(Math.random()*10)%3;
 		if (empCheck==fulltime){
 			empHour=8;
-		}
-		else
+		   }
+		else if(empCheck==parttime){
+			empHour=4;
+	      	   }
+		else {
 			empHour=0;
+		   }
 		System.out.println("Dailywage="+ratePerHour*empHour);
 
 	}
