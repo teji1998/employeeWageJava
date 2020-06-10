@@ -5,15 +5,14 @@ public class EmployeeWageUC{
 		int fulltime=1;
 		int parttime=2;
 		double empCheck=Math.floor(Math.random()*10)%3;
-		if (empCheck==fulltime){
-			empHour=8;
-		   }
-		else if(empCheck==parttime){
-			empHour=4;
-	      	   }
-		else {
-			empHour=0;
-		   }
+		switch((int) empCheck) {
+		case 1: empHour=8;
+				break;
+		case 2: empHour=4;
+				break;
+		default:empHour=0;
+				}
+	
 		System.out.println("Dailywage="+ratePerHour*empHour);
 
 	}
