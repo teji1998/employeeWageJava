@@ -1,9 +1,12 @@
 public class EmployeeWageUC{
 	public static void main(String[] args){
-		int ratePerHour=20,empHour=0;
+		int ratePerHour=20,empHour=0,TotalHours=0;
 		System.out.println("Welcome to Employee Wage Computation.");
 		int fulltime=1;
 		int parttime=2;
+		int WorkingDays=20;
+		int i=0;
+		for (i=0;i<WorkingDays;i++){
 		double empCheck=Math.floor(Math.random()*10)%3;
 		switch((int) empCheck) {
 		case 1: empHour=8;
@@ -14,6 +17,8 @@ public class EmployeeWageUC{
 				}
 	
 		System.out.println("Dailywage="+ratePerHour*empHour);
-
+		TotalHours+=empHour;
+		}
+		System.out.println("Monthly wage is="+(ratePerHour*TotalHours));
 	}
 }
